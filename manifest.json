@@ -8,21 +8,22 @@
       "48": "images/icon-48.png",
       "128": "images/icon-128.png"
     },
-    "page_actions": {
-        "default_icons": {
-            "16": "images/icon-16.png",
-            "48": "images/icon-48.png",
-            "128": "images/icon-128.png"
-        }
-    },
     "content_scripts": [
       {
         "js": [
             "script.js"
         ],
         "matches": [
-          "https://www.google.co.jp/_/chrome/newtab?espv=2&ie=UTF-8"
+          "https://www.google.com/*"
         ]
       }
-    ]
+    ],
+    "background": {
+        "service_worker": "background.js"  
+    },
+    "action": {
+        "default_icons": "icon-16.png",
+        "default_popup": "popup.html",
+        "default_title": "default_popup"
+    }
   }
