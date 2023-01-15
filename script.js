@@ -21,7 +21,7 @@ async function fetchData() {
         // .catch(err => console.error(err));
 
         const res = await record.json()
-        console.log(res[1].word)
+        console.log(res)
     document.getElementById("def").innerHTML = res[1].word
     document.getElementById("mean").innerHTML = res[1].mean
 }
